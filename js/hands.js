@@ -11,7 +11,8 @@ const FOUR_OF_A_KIND = 7;
 const STRAIGHT_FLUSH = 8;
 const ROYAL_FLUSH = 9;
 
-var cardLib = require('./cards');
+//var cardLib = require('./cards');
+import {getValue} from "../js/cards.js";
 
 const HANDS = [HIGH_CARD, PAIR, TWO_PAIR, THREE_OF_A_KIND, STRAIGHT, FLUSH, FULL_HOUSE, STRAIGHT_FLUSH, ROYAL_FLUSH];
 
@@ -91,7 +92,7 @@ function getRoyalFlush(cards) {
         return null;
     }
 
-    if(straightFlush.cards[0].value == cardLib.getValue("ten") && straightFlush.cards[4].value == cardLib.getValue("ace")){
+    if(straightFlush.cards[0].value == getValue("ten") && straightFlush.cards[4].value == getValue("ace")){
         return {value:ROYAL_FLUSH, cards:straightFlush.cards};
     }
 
@@ -350,7 +351,16 @@ function getHighCard(cards) {
 
     return {value: HIGH_CARD, cards: [cards[idx]]};
 }
+/*
+export {
+    HANDS, HIGH_CARD, PAIR, TWO_PAIR, THREE_OF_A_KIND, STRAIGHT, FLUSH, FULL_HOUSE, STRAIGHT_FLUSH, ROYAL_FLUSH,
+    getBestHand, getRoyalFlush, getStraightFlush, getFullHouse, getFlush,
+    getStraight, getThreeOfAKind, getTwoPair, getPair, getHighCard, getName
+};
+*/
 
+export {getBestHand, getName}
+/*
 module.exports = {
     HANDS: HANDS,
     HIGH_CARD: HIGH_CARD,
@@ -374,6 +384,4 @@ module.exports = {
     getHighCard: getHighCard,
     getName:getName
 };
-
-
-
+*/

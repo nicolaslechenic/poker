@@ -1,0 +1,28 @@
+
+{
+  "name": "analyse-connaissances",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "type": "module",
+    "tests": "babel-node spec/run.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/greta-code-pizza/analyse-connaissances.git"
+  },
+  "author": "Nicolas LE CHENIC",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/greta-code-pizza/analyse-connaissances/issues"
+  },
+  "homepage": "https://github.com/greta-code-pizza/analyse-connaissances#readme",
+  "dependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/node": "^7.6.3",
+    "@babel/preset-env": "^7.6.0",
+    "jasmine": "^3.5.0"
+  }
+}

@@ -1,4 +1,5 @@
-var cards = require('../cards');
+//var cards = require('../cards');
+import {cards, SUITS, CARD_NAMES, shuffle, toCard, getValue} from "../js/cards.js";
 
 describe('cards', () => {
 
@@ -33,7 +34,7 @@ describe('cards', () => {
         expect(orgCardsStr).not.toEqual(newCardsStr);
     });
 
-    it('has a handy function called toCard', () => {
+    it('has a function called toCard', () => {
         expect(cards['toCard']).toBeDefined();
         expect(typeof cards['toCard']).toEqual('function');
     });

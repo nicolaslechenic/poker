@@ -1,5 +1,11 @@
-var hands = require('../hands');
-var cards = require('../cards');
+//var hands = require('../hands');
+//var cards = require('../cards');
+import {cards, SUITS, CARD_NAMES, shuffle, toCard, getValue} from "../js/cards.js";
+import {
+    HANDS, HIGH_CARD, PAIR, TWO_PAIR, THREE_OF_A_KIND, STRAIGHT, FLUSH, FULL_HOUSE, STRAIGHT_FLUSH, ROYAL_FLUSH,
+    getBestHand, getRoyalFlush, getStraightFlush, getFullHouse, getFlush,
+    getStraight, getThreeOfAKind, getTwoPair, getPair, getHighCard, getName
+} from "../js/hands.js";
 
 describe('hands spec', () => {
 

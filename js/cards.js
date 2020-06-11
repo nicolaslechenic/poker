@@ -13,7 +13,6 @@ var cards = [];
 
 SUITS.forEach((suit) => {
     for (var i = 2; i <= 14; i++) {
-        // Aces can be low or high
         var isAce = i == CARD_NAMES.length - 1;
         cards.push({value: i, name: CARD_NAMES[i], suit: suit, isAce:isAce})
     }
@@ -68,4 +67,7 @@ function toCard(val) {
 
 }
 
-module.exports = {cards: cards, suits: SUITS, names: CARD_NAMES, shuffle: shuffle, toCard: toCard, getValue:getValue};
+//export {cards, SUITS, CARD_NAMES, shuffle, toCard, getValue};
+export { shuffle, getValue }
+
+//module.exports = {cards: cards, suits: SUITS, names: CARD_NAMES, shuffle: shuffle, toCard: toCard, getValue:getValue};

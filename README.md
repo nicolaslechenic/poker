@@ -5,8 +5,6 @@ run the following command:
 node game.js
 ```
 
-The game creates 4 players (John, Paul, George, and Ringo) and then deals them as you would expect in a round of Texas Hold 'Em.
-
 
 ```
 # output
