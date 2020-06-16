@@ -1,9 +1,5 @@
 
-import {play} from "./game.js";
-
-function replay(){
-  play();
-}
+import {playParts} from "./game.js";
 
 // On page Load
 window.addEventListener('load', () => {
@@ -12,7 +8,8 @@ window.addEventListener('load', () => {
     // On click on play
     play.addEventListener('click', (e) => {
       e.preventDefault();
-     
-      replay();
+     playParts();
+      //replay();
     });
   });
+

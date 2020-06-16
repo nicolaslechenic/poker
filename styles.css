@@ -1,7 +1,37 @@
+
+body{
+    background-color: grey;
+}
 .div_card{
-    width:100px;
+    width:150px;
+    padding: 5px;
+}
+
+.div_card img{
+    width:100%;
+    background-color: white;
 }
 
 .container_card{
     display:flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.div_players{
+    display:flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.button_result{
+    width:20%;
+    justify-content: center;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.common_cards{
+    justify-content: center;
+    text-align: center;
 }

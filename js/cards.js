@@ -7,7 +7,7 @@ const SPADES = 'spades';
 
 const SUITS = [CLUBS, HEARTS, DIAMONDS, SPADES];
 
-const CARD_NAMES = [null, null, "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "jack", "queen", "king", "ace"];
+const CARD_NAMES = [null, null, "2", "3", "4", "5", "6", "7", "8", "9", "10", "jack", "queen", "king", "ace"];
 
 var cards = [];
 

@@ -246,7 +246,7 @@ function getFourOfAKind(cards) {
 
     var pair = null;
 
-    Object.keys(matches).forEach((val, idx) => {
+    Object.keys(matches).forEach((val) => {
         var cards = matches[val];
         if (cards.length == 4) {
             pair = cards;

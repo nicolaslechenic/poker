@@ -8,34 +8,44 @@
 </head>
 <body>
 
-  <div class='players'>
+  <div class='div_players'>
     
-    <div class="joueur">
-
+    <div class="div_player">
+      <p id="player1">Player 1</p>
+      <div class="container_card">
+        <div class="div_card"><img id="cp11" class="card card_player" src="images/card_back.jpg" alt=""></div>
+        <div class="div_card"><img id="cp12" class="card card_player" src="images/card_back.jpg" alt=""></div>
+      </div>
     </div>
 
-    <div>
+    <div class="button_result">
       <div>
-          <button id="button" class="button"> Play !</button>
+          <button id="button" class="button"> Next turn !</button>
       </div>
       <div>
-        <p id="resultat"You should play.</p>
+        <h2 id="stage">Stage.</h2>
+        <p id="resultat">You should play.</p>
       </div>
           
     </div>
-    <div class="joueur">
-        
+    <div class="div_player">
+      <p id="player2">Player 2</p>
+      <div class="container_card">
+        <div class="div_card"><img id="cp21" class="card card_player" src="images/card_back.jpg" alt=""></div>
+        <div class="div_card"><img id="cp22" class="card card_player" src="images/card_back.jpg" alt=""></div>
+      </div>
     </div>
     
-
-  
+  </div>
+  <div class= "common_cards">
     <div class="container_card">
-        <div class="div_card"><img id="c1" class="card" src="images/card_back.jpg" alt=""></div>
-        <div class="div_card"><img id="c2" class="card" src="images/card_back.jpg" alt=""></div>
-        <div class="div_card"><img id="c3" class="card" src="images/card_back.jpg" alt=""></div>
-        <div class="div_card"><img id="c4" class="card" src="images/card_back.jpg" alt=""></div>
-        <div class="div_card"><img id="c5" class="card" src="images/card_back.jpg" alt=""></div>
+        <div class="div_card"><img id="cc1" class="card card_flop" src="images/card_back.jpg" alt=""></div>
+        <div class="div_card"><img id="cc2" class="card card_flop" src="images/card_back.jpg" alt=""></div>
+        <div class="div_card"><img id="cc3" class="card card_flop" src="images/card_back.jpg" alt=""></div>
+        <div class="div_card"><img id="cc4" class="card card_turn" src="images/card_back.jpg" alt=""></div>
+        <div class="div_card"><img id="cc5" class="card card_river" src="images/card_back.jpg" alt=""></div>
     </div>
+  </div>
 
     <script type="module" src="js/script.js"></script>
 </body>
