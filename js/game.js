@@ -48,6 +48,7 @@ function playParts(){
     
     switch(stage){
         case 0: //shuffle
+            commonCards = [];
             deck = shuffle();
             cp11.src = 'images/card_back.jpg';
             cp12.src = 'images/card_back.jpg';
@@ -76,7 +77,6 @@ function playParts(){
             cp12.src = 'images/' + players[0].pocketCards[1].name + '_of_' + players[0].pocketCards[1].suit + '.png';
             cp21.src = 'images/' + players[1].pocketCards[0].name + '_of_' + players[1].pocketCards[0].suit + '.png';
             cp22.src = 'images/' + players[1].pocketCards[1].name + '_of_' + players[1].pocketCards[1].suit + '.png';
-
             flipCards(cards_player);
 
             break;
@@ -122,7 +122,7 @@ function playParts(){
     function getPlayerWithBestHand(){
         bestPlayer = null;
         bestHand = null;
-    
+        
         for(var i = 0; i < players.length;i++){
     
             var playerCards = players[i].pocketCards.slice(0);
@@ -130,17 +130,35 @@ function playParts(){
     
             var hand = getBestHand(playerCards);
             console.log(hand);
+            
             if(!bestPlayer || !bestHand){
                 bestPlayer = players[i];
                 bestHand = hand;
-                continue;
             }
-    
-            if(hand.value > bestHand.value){
-                bestPlayer = players[i];
-                bestHand = hand;
-                continue;
+            else{
+                if(hand.value > bestHand.value){
+                    bestPlayer = players[i];
+                    bestHand = hand;
+                }
+                else{
+                    if(hand.value == bestHand.value){
+                        if(hand.value == 0){
+                            if(hand.cards[0].value > bestHand.cards[0].value){
+                                bestPlayer = players[i];
+                                bestHand = hand;
+                            }
+                            else{
+                                if(hand.cards[0].value == bestHand.cards[0].value){
+                                    bestPlayer = {name: 'égalité'};
+                                    bestHand = hand;
+                                }
+                            }
+                        
+                        }
+                    }
+                }
             }
+            
         }
         return bestPlayer;
     }
@@ -149,9 +167,15 @@ function playParts(){
         console.log('------------');
         console.log(round);
         console.log('------------');
+        let message = '';
         if(round!='shuffle'){
             getPlayerWithBestHand();
-            let message = `${bestPlayer.name} is winning with a ${getName(bestHand.value)}`
+            if(bestPlayer.name=='égalité'){
+                message = `Egalité !`
+            }
+            else{
+                message = `${bestPlayer.name} is winning with a ${getName(bestHand.value)}`;
+            }
             console.log(message);
             resultat.innerText = message;
         }

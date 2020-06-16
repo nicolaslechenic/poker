@@ -348,7 +348,6 @@ function getHighCard(cards) {
             idx = i;
         }
     }
-
     return {value: HIGH_CARD, cards: [cards[idx]]};
 }
 /*
