@@ -1,5 +1,5 @@
 
-body{
+#game_section, #email_section{
     background-color: grey;
 }
 .div_card{
@@ -34,4 +34,13 @@ body{
 .common_cards{
     justify-content: center;
     text-align: center;
+}
+
+
+
+#email_input{
+    justify-content: center;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }

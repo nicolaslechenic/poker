@@ -143,6 +143,7 @@ function playParts(){
                 else{
                     if(hand.value == bestHand.value){
                         if(hand.value == 0){
+                            // high card
                             if(hand.cards[0].value > bestHand.cards[0].value){
                                 bestPlayer = players[i];
                                 bestHand = hand;
