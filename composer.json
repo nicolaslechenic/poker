@@ -1,0 +1,16 @@
+{
+  "name": "plop/plopandplop",
+  "description": "Plop project",
+  "authors": [{
+      "name": "Nicolas LE CHENIC",
+      "email": "nicolaslechenic@gmail.com"
+  }],
+  "autoload": {
+      "psr-4": {
+          "Plop\\": "./app/"
+      }
+  },
+  "require": {
+      "vlucas/phpdotenv": "^5.0"
+  }
+}
