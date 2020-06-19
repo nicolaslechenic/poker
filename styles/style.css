@@ -1,9 +1,11 @@
 
 #game_section, #email_section{
     background-color: grey;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 .div_card{
-    width:150px;
+    width:140px;
     padding: 15px;
 }
 

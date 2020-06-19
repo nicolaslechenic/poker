@@ -12,7 +12,7 @@ const STRAIGHT_FLUSH = 8;
 const ROYAL_FLUSH = 9;
 
 //var cardLib = require('./cards');
-import {getValue} from "../js/cards.js";
+import {getValue} from "./cards.js";
 
 const HANDS = [HIGH_CARD, PAIR, TWO_PAIR, THREE_OF_A_KIND, STRAIGHT, FLUSH, FULL_HOUSE, STRAIGHT_FLUSH, ROYAL_FLUSH];
 
@@ -358,7 +358,8 @@ export {
 };
 */
 
-export {getBestHand, getName}
+export {HIGH_CARD, PAIR, TWO_PAIR, THREE_OF_A_KIND, STRAIGHT, FLUSH, FULL_HOUSE, STRAIGHT_FLUSH, ROYAL_FLUSH,
+    getBestHand, getName}
 /*
 module.exports = {
     HANDS: HANDS,

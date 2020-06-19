@@ -67,7 +67,6 @@ function toCard(val) {
 
 }
 
-//export {cards, SUITS, CARD_NAMES, shuffle, toCard, getValue};
-export { shuffle, getValue }
+export { cards, SUITS, CARD_NAMES, toCard, shuffle, getValue }
 
 //module.exports = {cards: cards, suits: SUITS, names: CARD_NAMES, shuffle: shuffle, toCard: toCard, getValue:getValue};

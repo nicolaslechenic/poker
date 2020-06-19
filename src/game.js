@@ -1,25 +1,23 @@
 
-import { shuffle, getValue} from "../js/cards.js";
-import {
-    getBestHand, getName
-} from "../js/hands.js";
+import { shuffle, getValue } from "./cards.js";
+import { getBestHand, getName } from "./hands.js";
 
 //'use strict'
 
 //var cards = require('./cards');
 //var hands = require('./hands');
-
 var stage = 0;
 var commonCards = [];
 var players = [{name: "John"}, {name: "Paul"}
 //, {name: "George"}, {name: "Ringo"}
 ];
-player1.innerText =  `${players[0].name}`;
-player2.innerText =  `${players[1].name}`;
+
 var bestPlayer = null;
 var bestHand = null;
 
 var deck = shuffle();
+var player1 = document.getElementById('player1');
+var player2 = document.getElementById('player2');
 
 var cp11 = document.getElementById('cp11');
 var cp12 = document.getElementById('cp12');
@@ -38,27 +36,26 @@ const card_turn = document.querySelectorAll('.card_turn');
 const card_river = document.querySelectorAll('.card_river');
 const cards = document.querySelectorAll('.card');
 
-
-
-// pseudo code:
-
-//function pushButton
+player1.innerText =  `${players[0].name}`;
+player2.innerText =  `${players[1].name}`;
 
 function playParts(){
     
+
+
     switch(stage){
         case 0: //shuffle
             commonCards = [];
             deck = shuffle();
-            cp11.src = 'images/card_back.jpg';
-            cp12.src = 'images/card_back.jpg';
-            cp21.src = 'images/card_back.jpg';
-            cp22.src = 'images/card_back.jpg';
-            cc1.src = 'images/card_back.jpg';
-            cc2.src = 'images/card_back.jpg';
-            cc3.src = 'images/card_back.jpg';
-            cc4.src = 'images/card_back.jpg';
-            cc5.src = 'images/card_back.jpg';
+            cp11.src = '../../card_images/card_back.jpg';
+            cp12.src = '../../card_images/card_back.jpg';
+            cp21.src = '../../card_images/card_back.jpg';
+            cp22.src = '../../card_images/card_back.jpg';
+            cc1.src = '../../card_images/card_back.jpg';
+            cc2.src = '../../card_images/card_back.jpg';
+            cc3.src = '../../card_images/card_back.jpg';
+            cc4.src = '../../card_images/card_back.jpg';
+            cc5.src = '../../card_images/card_back.jpg';
             echoBestPlayer('shuffle');
             cards.forEach(e => {
                 e.style.transform = 'none';
@@ -73,10 +70,10 @@ function playParts(){
                 players[i].pocketCards = deck.splice(0, 2);
             }
             echoBestPlayer('deal');
-            cp11.src = 'images/' + players[0].pocketCards[0].name + '_of_' + players[0].pocketCards[0].suit + '.png';
-            cp12.src = 'images/' + players[0].pocketCards[1].name + '_of_' + players[0].pocketCards[1].suit + '.png';
-            cp21.src = 'images/' + players[1].pocketCards[0].name + '_of_' + players[1].pocketCards[0].suit + '.png';
-            cp22.src = 'images/' + players[1].pocketCards[1].name + '_of_' + players[1].pocketCards[1].suit + '.png';
+            cp11.src = '../../card_images/' + players[0].pocketCards[0].name + '_of_' + players[0].pocketCards[0].suit + '.png';
+            cp12.src = '../../card_images/' + players[0].pocketCards[1].name + '_of_' + players[0].pocketCards[1].suit + '.png';
+            cp21.src = '../../card_images/' + players[1].pocketCards[0].name + '_of_' + players[1].pocketCards[0].suit + '.png';
+            cp22.src = '../../card_images/' + players[1].pocketCards[1].name + '_of_' + players[1].pocketCards[1].suit + '.png';
             flipCards(cards_player);
 
             break;
@@ -84,9 +81,9 @@ function playParts(){
         case 2: //flop
             commonCards = deck.splice(0, 3);
             echoBestPlayer('flop');
-            cc1.src = 'images/' + commonCards[0].name + '_of_' +  commonCards[0].suit + '.png';
-            cc2.src = 'images/' + commonCards[1].name + '_of_' +  commonCards[1].suit + '.png';
-            cc3.src = 'images/' + commonCards[2].name + '_of_' +  commonCards[2].suit + '.png';
+            cc1.src = '../../card_images/' + commonCards[0].name + '_of_' +  commonCards[0].suit + '.png';
+            cc2.src = '../../card_images/' + commonCards[1].name + '_of_' +  commonCards[1].suit + '.png';
+            cc3.src = '../../card_images/' + commonCards[2].name + '_of_' +  commonCards[2].suit + '.png';
             flipCards(cards_flop);
 
             break;
@@ -94,7 +91,7 @@ function playParts(){
         case 3: //turn
             commonCards.push.apply(commonCards, deck.splice(0, 1));
             echoBestPlayer('turn');
-            cc4.src = 'images/' + commonCards[3].name + '_of_' +  commonCards[3].suit + '.png';
+            cc4.src = '../../card_images/' + commonCards[3].name + '_of_' +  commonCards[3].suit + '.png';
             flipCards(card_turn);
 
             break;
@@ -102,7 +99,7 @@ function playParts(){
         case 4: //river
             commonCards.push.apply(commonCards, deck.splice(0, 1));
             echoBestPlayer('river');
-            cc5.src = 'images/' + commonCards[4].name + '_of_' +  commonCards[4].suit + '.png';
+            cc5.src = '../../card_images/' + commonCards[4].name + '_of_' +  commonCards[4].suit + '.png';
             flipCards(card_river);
             break;
 
@@ -143,7 +140,7 @@ function playParts(){
                 else{
                     if(hand.value == bestHand.value){
                         if(hand.value == 0){
-                            // high card
+                            // high card equality detection
                             if(hand.cards[0].value > bestHand.cards[0].value){
                                 bestPlayer = players[i];
                                 bestHand = hand;
@@ -165,9 +162,9 @@ function playParts(){
     }
     
     function echoBestPlayer(round){
-        console.log('------------');
+        console.log('------------------------------------------------------------------------------------------------------------------------');
         console.log(round);
-        console.log('------------');
+        console.log('------------------------------------------------------------------------------------------------------------------------');
         let message = '';
         if(round!='shuffle'){
             getPlayerWithBestHand();
@@ -175,7 +172,7 @@ function playParts(){
                 message = `Egalité !`
             }
             else{
-                message = `${bestPlayer.name} is winning with a ${getName(bestHand.value)}`;
+                message = `${bestPlayer.name} is winning with a ${getName(bestHand.value)}.`;
             }
             console.log(message);
             resultat.innerText = message;

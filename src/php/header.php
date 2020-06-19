@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- My styles -->
+    <link rel="stylesheet" href="../../styles/style.css" />
+
+    <!-- Bootstrap styles -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
     <!-- JS, Popper.js, and jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -13,12 +17,12 @@
 
     <!-- SMTP for emails -->
     <script src="https://smtpjs.com/v3/smtp.js"></script> 
-    <script src="js/email.js"></script>
+    <script src="../email.js"></script>
 
-  <title>Poker</title>
+    <title>Poker</title>
 </head>
-<body>
 
+<body>
     <header id='header'>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="index.php">My Poker site</a>
@@ -27,9 +31,10 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                <a class="nav-item nav-link active" href="index.php">Accueil <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link" href="email.php">Email</a>
-                
+                    <a class="nav-item nav-link active" href="index.php"> Jouer! <span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="email.php"> Email </a>
+                    <a class="nav-item nav-link" href="api.php"> API </a>
+
                 </div>
             </div>
         </nav>
