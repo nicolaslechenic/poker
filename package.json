@@ -5,7 +5,6 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "type": "module",
     "tests": "babel-node spec/run.js"
   },
   "repository": {
