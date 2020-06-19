@@ -22,7 +22,7 @@
           </div>
           <div>
             <h2 id="stage">Stage.</h2>
-            <p id="resultat">You should play.</p>
+            <p id="resultat"> You should play.</p>
           </div>
         </div>
 
