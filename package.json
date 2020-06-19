@@ -1,9 +1,6 @@
 {
   "name": "analyse-connaissances",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "type": "module",
   "scripts": {
     "tests": "babel-node spec/run.js"
   },
