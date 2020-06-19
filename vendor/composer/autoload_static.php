@@ -49,7 +49,7 @@ class ComposerStaticInit6d92d5a1c5f1f8bca039d60836c0bdb6
         ),
         'Plop\\' => 
         array (
-            0 => __DIR__ . '/../..' . '/app',
+            0 => __DIR__ . '/../..' . '/',
         ),
         'PhpOption\\' => 
         array (
